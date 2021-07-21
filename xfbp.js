@@ -14,7 +14,6 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 	load (url, options) {
 		if (!url || !url.startsWith('http'))
 			throw new Error(`X-Frame-Bypass src ${url} does not start with http(s)://`)
-		console.log('X-Frame-Bypass loading:', url)
 		this.srcdoc = ``
 		this.fetchProxy(url, options, 0).then(res => res.text()).then(data => {
 			if (data)
