@@ -37,7 +37,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 		}
 	})
 	</script>`)
-		}).catch(e => console.error('Cannot load X-Frame-Bypass:', e))
+		}).catch(e => console.error('', e))
 	}
 	fetchProxy (url, options, i) {
 		const proxies = (options || {}).proxies || [
